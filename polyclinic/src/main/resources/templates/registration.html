@@ -1,0 +1,100 @@
+    <!DOCTYPE HTML>
+    <html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Регистрация</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+    <!--Add new user-->
+    <!--{{#message}}-->
+    <!--    {{message}}-->
+    <!--{{/message}}-->
+    <header th:insert="blocks/header :: header-guest"></header>
+    <div class="pad">
+        <form class="form" th:action="@{/registration}" method="post">
+            <!--  <div><label> User Name : <input type="text" name="username"/> </label></div>-->
+            <input class="input" type="text" placeholder="Ваше имя" name="name">
+            <input class="input" type="text" placeholder="Ваша фамилия" name="lastName">
+            <input class="input" type="text" placeholder="Ваше отчество" name="middleName">
+            <input class="input" type="text" placeholder="Логин" name="username">
+            <div class="error" th:text="${usernameError}"></div>
+            <input class="input" type="password" placeholder="Пароль" name="password">
+            <input class="input" type="password" placeholder="Пароль еще раз" name="passwordConfirm">
+            <div class="error" th:text="${passwordError}"></div>
+            <input class="input" type="text" placeholder="Ваш полис ОМС" name="insurance">
+            <div class="error" th:text="${allErrors}"></div>
+            <!--  <div><label> Password: <input type="password" name="password"/> </label></div>-->
+            <!--  <input type="hidden" name="_csrf" value="{{_csrf.token}}" />-->
+            <!--  <button class="btn" type="submit">Регистрация</button>-->
+            <div><input class="btn" type="submit"  value="Зарегистрироваться"/></div>
+
+
+
+        </form>
+    </div>
+    </body>
+    </html>
+
+
+
+    <style>
+    .error {
+    text-align: center;
+    color: red;
+    }
+
+    .pad {
+    padding: 100px;
+    }
+      body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #000;
+      background-color: #f8f8f8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .form {
+      max-width: 320px;
+      padding: 15px;
+      margin: 20px auto;
+      background-color: #fff;
+    }
+
+    .input {
+      display: block;
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+
+      border: 1px solid #ccc;
+
+      font-family: inherit;
+      font-size: 16px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 8px 10px;
+
+      border: 0;
+      background-color: #1cbc11;
+      cursor: pointer;
+
+      font-family: inherit;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .btn:hover {
+      background-color: #14a20a;
+    }
+
+
+
+    </style>

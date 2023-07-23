@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+
+<div th:fragment="main-body">
+  <style>
+
+.head {
+background-color: white;
+position: fixed;
+top: 0;
+z-index: 100;
+width: 100%;
+}
+
+section {
+    padding: 80px 0;
+}
+b {
+    font-weight: bold;
+}
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+.section_title {
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 60px;
+    color: #324a7a;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.section_subtitle {
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 48px;
+    color: #76c1d6;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.section_comand {
+    position: relative;
+    padding-bottom: 0;
+}
+.section_comand:after {
+    content: "";
+    position: absolute;
+    width: 349px;
+    height: 293px;
+    background: url(https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_trianglbg1.png) no-repeat;
+    right: 0;
+    top: 150px;
+}
+.section_comand .text {
+    font-size: 20px;
+    line-height: 34px;
+    color: #626fa7;
+}
+.section_comand .command_cols:after {
+    content: "";
+    position: absolute;
+    width: 444px;
+    height: 151px;
+    background: url(https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_trianglbg2.png) no-repeat;
+        bottom: 95px;
+    left: 467px;
+}
+
+.section_main_cennosti .cennosti_block {
+    margin-top: 80px;
+}
+.section_main_cennosti .cennosti_block .cenosti_item {
+    display: flex;
+    align-items: flex-start;
+}
+.section_main_cennosti .cennosti_block .cenosti_item > img {
+    padding-top: 30px;
+}
+.section_main_cennosti .cennosti_block .cenosti_item .cennosti_content {
+    padding-left: 30px;
+}
+.section_main_cennosti .cennosti_block .cenosti_item .cennosti_content .cennosti_text {
+    margin-top: 15px;
+}
+.section_main_cennosti .cennosti_block .cenosti_item .cennosti_content .cennosti_title {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 26px;
+    color: #334a7a;
+    margin-bottom: 15px;
+}
+.section_main_cennosti .cennosti_block .cenosti_item .cennosti_content p {
+    font-size: 20px;
+    line-height: 32px;
+    color: #626fa7;
+    margin-bottom: 15px;
+}
+.section_main_cennosti .cennosti_block .cenosti_item .cennosti_content .cennosti_more {
+    font-size: 22px;
+    line-height: 32px;
+    color: #79bdd5;
+    text-decoration: underline !important;
+}
+.section_main_cennosti .cennosti_block .cenosti_item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.section_main_cennosti .cennosti_block .cenosti_item:nth-child(even) .cennosti_content {
+    text-align: right;
+    padding-right: 30px;
+}
+.section_main_cennosti .cennosti_block .cenosti_item .cennosti_list_block {
+    display: none;
+}
+.section_main_cennosti .cennosti_block .cenosti_item .cennosti_list_block ul {
+    list-style: none;
+    padding-left: 60px;
+    margin: 0;
+}
+.section_main_cennosti .cennosti_block .cenosti_item .cennosti_list_block ul li {
+    position: relative;
+    padding: 10px;
+    background: #a8d4e4;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.section_main_cennosti .cennosti_block .cenosti_item .cennosti_list_block ul li span {
+    font-weight: 400;
+    color: #334a7a;
+}
+.section_main_cennosti .cennosti_block .cenosti_item .cennosti_list_block ul li:before {
+    content: "";
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    width: 31px;
+    height: 33px;
+    background: url(https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_li_icon.png) no-repeat;
+    transform: translate(0, -50%);
+}
+.pl100 {
+    padding-left: 104px;
+}
+
+
+</style>
+<section class="section_comand">
+  <div class="wrapper">
+    <div class="section_title">
+      МЫ - КОМАНДА ЗДРАВООХРАНЕНИЯ МОСКВЫ
+    </div>
+    <div class="section_subtitle pl100">
+      НАША ГЛАВНАЯ ЗАДАЧА - <br>ЗДОРОВЬЕ ПАЦИЕНТОВ!
+    </div>
+
+    <div class="row mb-5 command_cols">
+      <div class="col">
+        <img class="mb-3" src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cennosty.png" alt="">
+        <p class="text">Чтобы Ваше лечение было эффективным, а пребывание в поликлинике максимально комфортным, мы разработали систему ценностей, которым будем следовать в своей работе:</p>
+      </div>
+      <div class="col">
+        <img class="mb-3" src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_speech.png" alt="">
+        <p class="text">Комфортная атмосфера зависит не только от сотрудников поликлиники, но и от уважительного отношения всех посетителей.</p>
+        <p class="text">Поэтому, мы просим Вас быть доброжелательными с врачами и другими пациентами и, находясь в поликлинике, следовать простым принципам взаимного уважения.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section_main_cennosti">
+  <div class="wrapper">
+    <div class="section_title">
+      Основные ценности
+    </div>
+
+    <div class="cennosti_block">
+      <div class="cenosti_item">
+        <img src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cennosti1.png" alt="">
+        <div class="cennosti_content">
+          <img src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cenicon1.png" alt="">
+          <div class="cennosti_text">
+            <div class="cennosti_title">Пациентоориентированность</div>
+            <p>Мы действуем в интересах пациента, обеспечивая <br>
+              максимально комфортные и удобные условия для <br>
+              предоставления своевременной медицинской помощи</p>
+
+            <div class="cennosti_list_block" style="display: block;">
+              <ul>
+                <li>Мы ценим время пациентов, <span>стараемся проводить исследования, процедуры и лечение максимально эффективно и быстро</span></li>
+                <li>Мы внимательно выслушиваем пациента, <span>стараемся понять суть проблемы и переживаний и помогаем в решении вопроса</span></li>
+                <li>Мы заинтересованы в здоровье пациента <span>и результате его лечения, в скорейшем выздоровлении</span></li>
+                <li>Мы умеем работать со сложными эмоциональными состояниями людей, <span>оказываем моральную поддержку пациентам, когда это необходимо</span></li>
+                <li>Мы объясняем, какую информацию дает исследование, <span>и почему его необходимо провести, детально расписываем план лечения пациента и рассказываем о нём на доступном и понятном языке</span></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="cenosti_item">
+        <img src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cennosti2.png" alt="">
+        <div class="cennosti_content">
+          <img src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cenicon2.png" alt="">
+          <div class="cennosti_text">
+            <div class="cennosti_title">Профессионализм</div>
+            <p>Мы ответственно относимся к своим профессиональным <br>
+              обязанностям, совершенствуем необходимые знания <br>
+              и навыки, перенимая опыт у коллег, и с готовностью <br>
+              делимся своим.</p>
+
+            <div class="cennosti_list_block">
+              <ul>
+                <li>Мы владеем стандартами оказания медицинской помощи, <span>профессиональными знаниями и навыками, необходимыми для успеха в лечении пациентов</span></li>
+                <li>Мы предоставляем безопасное и качественное лечение, <span>рассказываем о возможных вариантах и помогаем выбрать наиболее оптимальные для конкретного пациента</span></li>
+                <li>Главный принцип работы - "не навреди!" <span>Прежде чем что-то сказать или сделать, мы хорошо это обдумываем</span></li>
+                <li>Мы четко понимаем <span>свои профессиональные и должностные обязанности</span></li>
+                <li>Мы постоянно совершенствуемся <span>для улучшения качества работы учреждения и в интересах пациента, умеем адаптироваться к изменениям и идём в ногу со временем</span></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="cenosti_item">
+        <img src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cennosti4.png" alt="">
+        <div class="cennosti_content">
+          <img src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cenicon4.png" alt="">
+          <div class="cennosti_text">
+            <div class="cennosti_title">Доброжелательность</div>
+            <p>Мы создаем атмосферу, которая направлена на то, чтобы <br>
+              оставить хорошее впечатление от каждого посещения <br>
+              поликлиники. Решаем вопросы эффективно и быстро, <br>
+              мысля и действуя позитивно.</p>
+
+            <div class="cennosti_list_block">
+              <ul>
+                <li>Мы взаимодействуем с пациентами <span>в спокойной и вежливой манере</span></li>
+                <li>Мы заботимся о создании комфортной среды <span>в нашей поликлинике</span></li>
+                <li>Мы стараемся контролировать свое эмоциональное состояние, <span>в том числе в сложных ситуациях, даже при нехватке ресурсов и времени</span></li>
+                <li>Мы стремимся встречать пациентов с позитивным настроем, <span>начинать взаимодействие с приветствия, демонстрируя желание помочь</span></li>
+                <li>Мы обращаемся к пациентам по имени-отчеству</li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="cenosti_item">
+        <img src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cennosti3.png" alt="">
+        <div class="cennosti_content">
+          <img src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cenicon3.png" alt="">
+          <div class="cennosti_text">
+            <div class="cennosti_title">Командная работа</div>
+            <p>Мы работаем как единый механизм. Все наши действия <br>
+              направлены на предоставление помощи пациенту.</p>
+
+            <div class="cennosti_list_block">
+              <ul>
+                <li>Мы помним о том, что командная работа - основа здоровья пациентов, <span>а значит, нашего успеха</span></li>
+                <li>Мы настроены на обратную связь с пациентами, <span>учитываем их мнение и вносим предложения по улучшению работы поликлиники</span></li>
+                <li>В случае необходимости мы запрашиваем помощь и поддержку более опытных коллег, <span>в том числе из других учреждений и сфер</span></li>
+                <li>В случае возникновения спорных ситуаций мы ведём себя конструктивно, <span>умеем совместно находить оптимальный выход для всех заинтересованных сторон</span></li>
+                <li>Мнение коллег и пациентов ценно <span>для достижения совместного результата</span></li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="cenosti_item">
+        <img src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cennosti5.png" alt="">
+        <div class="cennosti_content">
+          <img src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cenicon5.png" alt="">
+          <div class="cennosti_text">
+            <div class="cennosti_title">Доверие</div>
+            <p>Мы создаем атмосферу доверия в поликлинике, ценим <br>
+              ее и работаем так, чтобы пациенты доверяли нам</p>
+
+            <div class="cennosti_list_block">
+              <ul>
+                <li><span>Мы объясняем пациенту, что </span>результат лечения, — это совместные усилия пациента и врача</li>
+                <li>Мы предоставляем полную и объективную информацию, <span>строим искренние и честные отношения  с пациентами</span></li>
+                <li>Мы отвечаем на вопросы пациентов <span>максимально объективно и открыто, соблюдая нормы врачебной этики</span></li>
+                <li>Мы стремимся произвести приятное впечатление на посетителей поликлиники, <span>ведь это необходимо для доверительных отношений с пациентами</span></li>
+                <li>Мы помогаем пациентам поверить в положительный результат. <span>При необходимости мы делимся своим личным опытом для создания атмосферы доверия</span></li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="cenosti_item">
+        <img src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cennosti6.png" alt="">
+        <div class="cennosti_content">
+          <img src="https://mosgorzdrav.ru/uploads/imperavi/ru-RU/mclinic_cenicon6.png" alt="">
+          <div class="cennosti_text">
+            <div class="cennosti_title">Уважение</div>
+            <p>Мы поддерживаем корректную форму общения, добрые <br>
+              взаимоотношения с пациентами</p>
+
+            <div class="cennosti_list_block">
+              <ul>
+                <li>Мы взаимодействуем в формате диалога, <span>ищем и находим общий язык с коллегами и пациентами</span></li>
+                <li>Мы внимательны к потребностям пациентов <span>и учитываем их при взаимодействии</span></li>
+                <li>Мы максимально точно и корректно формулируем вопросы <span>для прояснения ситуации, не делаем быстрых суждений</span></li>
+                <li>Мы проявляем терпение при общении и взаимодействии с пациентом, <span>даем понять, что его ситуация не безразлична для нас</span></li>
+                <li>Мы соблюдаем личные границы пациентов</li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
